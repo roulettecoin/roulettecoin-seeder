@@ -1,8 +1,9 @@
-litecoin-seeder
-===============
+roulettecoin-seeder
+===================
 
-Litecoin-seeder is a crawler for the Litecoin network, which exposes a list
-of reliable nodes via a built-in DNS server.
+Roulettecoin-seeder is a crawler for the Roulettecoin network, which
+exposes a list of reliable nodes via a built-in DNS server. It's a
+clone of Litecoin-seeder.
 
 Features:
 * regularly revisits known nodes to check their availability

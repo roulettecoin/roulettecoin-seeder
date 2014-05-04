@@ -342,14 +342,14 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"dnsseed.litecointools.com", "dnsseed.litecoinpool.org", "dnsseed.ltc.xurious.com", ""};
-static const string testnet_seeds[] = {"testnet-seed.litecointools.com", ""};
+static const string mainnet_seeds[] = {"dnsseed.roulettecoin.cc", ""};
+static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 9333), true);
-  }
+  db.Add(CService("54.187.58.73", 3773), true);
+  db.Add(CService("54.254.216.28", 3773), true);
+  db.Add(CService("54.72.223.212", 3773), true);
   do {
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;
@@ -377,10 +377,10 @@ int main(int argc, char **argv) {
   bool fDNS = true;
   if (opts.fUseTestNet) {
       printf("Using testnet.\n");
-      pchMessageStart[0] = 0xfc;
-      pchMessageStart[1] = 0xc1;
-      pchMessageStart[2] = 0xb7;
-      pchMessageStart[3] = 0xdc;
+      pchMessageStart[0] = 0xd2;
+      pchMessageStart[1] = 0xcf;
+      pchMessageStart[2] = 0xd5;
+      pchMessageStart[3] = 0xcc;
       seeds = testnet_seeds;
       fTestNet = true;
   }
